@@ -1,0 +1,130 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "70521c4a",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "History is empty, cannot export",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 3\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mcv2\u001b[39;00m\n\u001b[32m      2\u001b[39m \u001b[38;5;28;01mfrom\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mmatplotlib\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mimport\u001b[39;00m pyplot \u001b[38;5;28;01mas\u001b[39;00m plt\n\u001b[32m----> \u001b[39m\u001b[32m3\u001b[39m \u001b[43mget_ipython\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[43m.\u001b[49m\u001b[43mrun_line_magic\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m'\u001b[39;49m\u001b[33;43mnotebook\u001b[39;49m\u001b[33;43m'\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[33;43m'\u001b[39;49m\u001b[33;43minline\u001b[39;49m\u001b[33;43m'\u001b[39;49m\u001b[43m)\u001b[49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\IPython\\core\\interactiveshell.py:2486\u001b[39m, in \u001b[36mInteractiveShell.run_line_magic\u001b[39m\u001b[34m(self, magic_name, line, _stack_depth)\u001b[39m\n\u001b[32m   2484\u001b[39m     kwargs[\u001b[33m'\u001b[39m\u001b[33mlocal_ns\u001b[39m\u001b[33m'\u001b[39m] = \u001b[38;5;28mself\u001b[39m.get_local_scope(stack_depth)\n\u001b[32m   2485\u001b[39m \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m.builtin_trap:\n\u001b[32m-> \u001b[39m\u001b[32m2486\u001b[39m     result = \u001b[43mfn\u001b[49m\u001b[43m(\u001b[49m\u001b[43m*\u001b[49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43m*\u001b[49m\u001b[43m*\u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m   2488\u001b[39m \u001b[38;5;66;03m# The code below prevents the output from being displayed\u001b[39;00m\n\u001b[32m   2489\u001b[39m \u001b[38;5;66;03m# when using magics with decorator @output_can_be_silenced\u001b[39;00m\n\u001b[32m   2490\u001b[39m \u001b[38;5;66;03m# when the last Python token in the expression is a ';'.\u001b[39;00m\n\u001b[32m   2491\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mgetattr\u001b[39m(fn, magic.MAGIC_OUTPUT_CAN_BE_SILENCED, \u001b[38;5;28;01mFalse\u001b[39;00m):\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\IPython\\core\\magics\\basic.py:568\u001b[39m, in \u001b[36mBasicMagics.notebook\u001b[39m\u001b[34m(self, s)\u001b[39m\n\u001b[32m    565\u001b[39m exceptions = \u001b[38;5;28mself\u001b[39m.shell.history_manager.exceptions\n\u001b[32m    567\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m(\u001b[38;5;28mlen\u001b[39m(hist)<=\u001b[32m1\u001b[39m):\n\u001b[32m--> \u001b[39m\u001b[32m568\u001b[39m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mValueError\u001b[39;00m(\u001b[33m'\u001b[39m\u001b[33mHistory is empty, cannot export\u001b[39m\u001b[33m'\u001b[39m)\n\u001b[32m    569\u001b[39m \u001b[38;5;28;01mfor\u001b[39;00m session, execution_count, source \u001b[38;5;129;01min\u001b[39;00m hist[:-\u001b[32m1\u001b[39m]:\n\u001b[32m    570\u001b[39m     cell = v4.new_code_cell(execution_count=execution_count, source=source)\n",
+      "\u001b[31mValueError\u001b[39m: History is empty, cannot export"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "from matplotlib import pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "a4606f64",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<xml><var name=\"_dummy_ipython_val\"  />\n<var name=\"_dummy_special_var\"  />\n</xml>\n"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "from matplotlib import pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "5d3ea603",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<xml><var name=\"_dummy_ipython_val\"  />\n<var name=\"_dummy_special_var\"  />\n</xml>\n"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "from matplotlib import pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "7752d1c7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<xml><var name=\"_dummy_ipython_val\"  />\n<var name=\"_dummy_special_var\"  />\n</xml>\n"
+     ]
+    }
+   ],
+   "source": [
+    "img = cv2.imread('images/01.JPG')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "61e7363a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<xml><var name=\"_dummy_ipython_val\"  />\n<var name=\"_dummy_special_var\"  />\n<var name=\"img\" type=\"ndarray\" qualifier=\"numpy\" value=\"%5B%5B%5B188 180 173%5D%2C  %5B188 180 173%5D%2C  %5B189 181 174%5D%2C  ...%2C  %5B252 242 232%5D%2C  %5B251 241 231%5D%2C  %5B251 241 231%5D%5D%2C%2C %5B%5B188 180 173%5D%2C  %5B189 181 174%5D%2C  %5B189 181 174%5D%2C  ...%2C  %5B252 242 232%5D%2C  %5B251 241 231%5D%2C  %5B251 241 231%5D%5D%2C%2C %5B%5B189 181 174%5D%2C  %5B189 181 174%5D%2C  %5B190 182 175%5D%2C  ...%2C  %5B252 242 232%5D%2C  %5B251 241 231%5D%2C  %5B251 241 231%5D%5D%2C%2C ...%2C%2C %5B%5B 13  42  63%5D%2C  %5B 15  29  51%5D%2C  %5B  5   7   1%5D%2C  ...%2C  %5B 14  21  40%5D%2C  %5B 12  14  24%5D%2C  %5B 10   4   5%5D%5D%2C%2C %5B%5B 32  92 152%5D%2C  %5B 31  68 112%5D%2C  %5B  3   4   2%5D%2C  ...%2C  %5B  5  29  59%5D%2C  %5B  7  26  41%5D%2C  %5B  3   4   8%5D%5D%2C%2C %5B%5B 10  81 155%5D%2C  %5B  5  54 104%5D%2C  %5B  2   0   0%5D%2C  ...%2C  %5B  0  26  60%5D%2C  %5B  0  21  43%5D%2C  %5B  5   6  16%5D%5D%5D\" isContainer=\"True\" shape=\"(213, 320, 3)\" />\n</xml>\n"
+     ]
+    },
+    {
+     "ename": "NameError",
+     "evalue": "name 'canny' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[5]\u001b[39m\u001b[32m, line 8\u001b[39m\n\u001b[32m      5\u001b[39m plt.title(\u001b[33m\"\u001b[39m\u001b[33mImagem Original\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m      7\u001b[39m ax2 = fig.add_subplot(\u001b[32m122\u001b[39m)\n\u001b[32m----> \u001b[39m\u001b[32m8\u001b[39m plt.imshow(\u001b[43mcanny\u001b[49m, cmap=plt.cm.gray)\n\u001b[32m      9\u001b[39m plt.title(\u001b[33m\"\u001b[39m\u001b[33mOperador Canny\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m     11\u001b[39m plt.show()\n",
+      "\u001b[31mNameError\u001b[39m: name 'canny' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "fig = plt.figure(figsize=(20,50))\n",
+    "\n",
+    "ax1 = fig.add_subplot(121)\n",
+    "plt.imshow(img, cmap=plt.cm.gray)\n",
+    "plt.title(\"Imagem Original\")\n",
+    "\n",
+    "ax2 = fig.add_subplot(122)\n",
+    "plt.imshow(canny, cmap=plt.cm.gray)\n",
+    "plt.title(\"Operador Canny\")\n",
+    "\n",
+    "plt.show()"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
