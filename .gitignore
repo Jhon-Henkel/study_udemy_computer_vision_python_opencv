@@ -3,3 +3,4 @@
 .ipynb_checkpoints
 07_basic_video_commands/video.mp4
 inline
+09_characteristics_extraction/images/captcha_cut/*.png
