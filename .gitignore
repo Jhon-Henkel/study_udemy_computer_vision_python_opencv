@@ -4,3 +4,5 @@
 07_basic_video_commands/video.mp4
 inline
 09_characteristics_extraction/images/captcha_cut/*.png
+12_character_reading/placa1.png
+12_character_reading/detect_plate/models/*.cpickle
