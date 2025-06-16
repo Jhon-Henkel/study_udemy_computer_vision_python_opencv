@@ -6,3 +6,8 @@ inline
 09_characteristics_extraction/images/captcha_cut/*.png
 12_character_reading/*.png
 12_character_reading/detect_plate/models/*.cpickle
+14_deep_learning/01_lanet/kaggle.json
+14_deep_learning/01_lanet/melanoma-skin-cancer-dataset-of-10000-images.zip
+14_deep_learning/01_lanet/melanoma_dataset
+14_deep_learning/01_lanet/best_model.h5
+14_deep_learning/01_lanet/*.jpg
