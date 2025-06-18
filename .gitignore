@@ -11,3 +11,4 @@ inline
 14_deep_learning/01_lanet/melanoma_dataset
 14_deep_learning/01_lanet/best_model.h5
 14_deep_learning/01_lanet/*.jpg
+16_projects/01_object_separation/objects/*.jpg
