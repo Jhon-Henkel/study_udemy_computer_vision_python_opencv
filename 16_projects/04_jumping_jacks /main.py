@@ -2,8 +2,6 @@ import cv2
 import mediapipe as mp
 import math
 
-from sympy import false
-
 video = cv2.VideoCapture('video.mp4')
 pose = mp.solutions.pose
 Pose = pose.Pose(min_tracking_confidence=0.5, min_detection_confidence=0.5)
